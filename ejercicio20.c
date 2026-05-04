@@ -37,7 +37,7 @@ int main(){
         printf("| COLA       | %6d    | %6d    | %d    |\n", ventasCola, precioCola, totalCola);
         printf("| NARANJA    | %6d    | %6d    | %d    |\n", ventasNeranja, precioNaranja, totalNaranja);
         printf("| LIMONADAS  | %6d    | %6d    | %d    |\n", ventasLimonadas, precioLimonadas, totalLimonadas);
-        printf("| TOTAL      |        |        | %d      |\n", totalGeneral);
+        printf("| TOTAL      |        |        | %d|\n", totalGeneral);
         return 0;
     
 }
