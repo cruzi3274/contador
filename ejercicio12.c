@@ -16,7 +16,7 @@ int main(){
 
     m = km * METRO_POR_KM;
 
-    printf("El valor en metro es: %d\n", m);
+  -  printf("El valor en metro es: %d\n", m);
 
    
 
