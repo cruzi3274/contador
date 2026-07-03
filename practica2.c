@@ -1,49 +1,43 @@
 #include <stdio.h>
 #include <stdlib.h>
-
- //prototipo
-void Mensaje(char[10], int );
-int control(void);
-
+ 
 int main(){
     system("cls");
     system("color 9");
-    char nombre[10];
-    int edad, respuesta;
 
-    printf("Ingrese el nombre: ");
-    gets(nombre);
+    char letra;
+    int a = 0;
+    int b = 0;
+    int c;
 
-    printf("Ingrese su edad: ");
-    scanf("%d", &edad);
+    printf("Ingrese la letra: ");
+    scanf(" %c", &letra);
+    printf("Ingrese primer numero: ");
+    scanf("%d", &a);
 
-    Mensaje(nombre,edad);
+    printf("Ingrese segundo numero: ");
+    scanf("%d",&b);
 
-    respuesta = control();
-    if(respuesta == 1){
-        printf("Salio con exito  ");
-
-    }else{
-        printf("La cantraseña es incorrecta ");
+    if(a > b){
+        c = a;
+        a = b;
+        b = c;
     }
-   
+    while(a <= b){
+            if((letra == 'p' || letra == 'P') && (a % 2 == 0)){
+                printf("El numero %d es par\n", a);
+            }else if((letra == 'i' || letra == 'I')&&(a % 2 != 0)){
+                printf("El numero %d es impar\n", a);
+            }
+            else if(letra != 'p' && letra != 'P' && letra != 'i' && letra != 'I'){
+                printf("letra invalida\n");
+                break;
+            }
+            a = a + 1;
+
+    }
+
+    
 
     return 0;
-}
-void Mensaje(char nom[10], int edad){
-    printf("Bienvenidos, %s\n\n", nom);
-    printf("usted tiene %d a%cos\n\n", edad,164);
-   
-
-}
-int control(void){
-    int res, contra;
-    printf("Ingrese su contrase%ca: ",164);
-    scanf("%d", &contra);
-    if(contra == 123){
-        res=1;
-    }else{
-        res=0;
-    }
-    return res;
 }
